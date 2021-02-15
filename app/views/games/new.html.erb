@@ -1,0 +1,17 @@
+<h1>Your Random Letters Are: </h1>
+<ul>
+<% @letters.each do |letter| %>
+ <li class="letters"><%= letter %></li>
+<% end %>
+</ul>
+<div class="container">
+  <div class="col-6 offset-3 row border rounded-2 px-2">
+    <form action="/score" method="get">
+      <div class="mb-3">
+        <label for="guessForm" class="form-label">Guess a word: </label>
+        <input type="text" name="word_guess" required="required" placeholder='"dog"' class="form-control" id="guessForm">
+        <button type="submit" class="btn btn-primary mt-3">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
